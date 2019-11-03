@@ -34,9 +34,10 @@ RUN whoami && \
     rm ~/.zshrc && \
     ln -s Documents/dot_zshrc_docker_zsh .zshrc && \
     ln -s Documents/dot_vimrc_docker_zsh .vimrc && \
+    ln -s Documents/bin ~/bin && \
     sudo chsh -s /usr/bin/zsh robert
 
 # EXPOSE 22/tcp
 
-# ENTRYPOINT ["top"]
+# ENTRYPOINT ["/usr/bin/zsh"]
 # CMD /usr/bin/firefox
